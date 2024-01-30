@@ -21,7 +21,7 @@ const Register = (props) => {
     try {
       setData({ ...data, error: null });
       await axios.post(
-        "/api/auth/register",
+        "/api/auth/register", 
         { name, email, password },
         {
           headers: {
