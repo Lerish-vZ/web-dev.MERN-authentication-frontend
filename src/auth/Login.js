@@ -20,7 +20,7 @@ const Login = (props) => {
     try {
       setData({ ...data, error: null });
       const res = await axios.post(
-        "/api/auth/login", //backend url + /api/auth/login
+        "https://authentication-h2uv.onrender.com/api/auth/login",
         { email, password },
         {
           headers: {
@@ -68,6 +68,9 @@ const Login = (props) => {
                 Login
               </button>
             </div>
+            <p className = "mt-3 text-center" >
+               new user? <Link to = "/register"> Register </Link>
+            </p>
           </form>
         </div>
       </div>
